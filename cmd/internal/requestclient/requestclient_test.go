@@ -10,7 +10,6 @@ import (
 
 func newReqClient(fetchFunc func(string) (string, error)) RequestClient {
 	return RequestClient{
-		// FIX: Added '&' before mock.MockWebClient to use the pointer receiver
 		WebClient: &mock.MockWebClient{FetchHTMLFunc: fetchFunc},
 	}
 }

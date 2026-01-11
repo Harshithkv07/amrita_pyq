@@ -131,7 +131,6 @@ func (yt *YearTable) ChooseQP(url string) {
 						if err := yt.ReqClient.WebClient.DownloadFile(url, filename); err != nil {
 							fmt.Println(configs.ErrorStyle.Render(fmt.Sprintf("Download Error: %v\n", err)))
 						} else {
-							// FIX: Removed the undefined configs.Style
 							fmt.Println("Download Complete!")
 							time.Sleep(1 * time.Second)
 						}
